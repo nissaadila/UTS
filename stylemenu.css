@@ -1,0 +1,27 @@
+
+body{
+    background-color: black;
+}
+
+.A{
+    font-style: italic;
+    color: violet;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+
+.m{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    display:inline-flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    border-radius: 5px;
+    color: mediumvioletred;
+    border:violet 3px;
+    background-color:violet
+
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Product</title>
+    <link rel="stylesheet" href="styleaboutpro.css">
+    <div class="header">
+        <img class="logo" src="logo1.png" alt="Logo Clothing.Id">
+        <br><br>
+        <a class="a" href="List of Product.html"> List Of Product</a>
+        &nbsp;&nbsp;
+        <a class="a" href="About Us.html">About Us</a>
+        &nbsp;&nbsp;
+        <a class="a" href="About Product.html">About Product</a>
+
+    </div>
+</head> 
+<body>
+    <br>
+    <center><h2>About Product</h2></center>
+    <center><p>Add Product</p></center>
+    <br><br>
+    <form name="Addpro" class="Form" action="/manage" method="POST" onsubmit="return validate();">
+        <div class="Add">
+            <label><p>Nama Product</p></label>
+            <input type="text" name="Product" id="Product" required/>
+        </div>
+        <br>
+        <div class="Add1">
+            <label><p>Harga</p>
+            </label>
+            &nbsp &nbsp &nbspRp
+            <input type="number" name="Harga" id="Harga" required>
+        </div>
+        <br>
+        <div class="Add2">
+            <label><p>Deskripsi Produk</p></label>
+            <input type="text" name="Deskripsi" id="Deskripsi" required>
+        </div>
+        <br>
+        <div class="Add">
+            <label><p>Jumlah Stock</p></label>
+            <input type="number" name="Stock" id="Stock" required>
+        </div>
+        <br>
+        <div class="Add">
+            <label><p>Ukuran</p></label>
+            <select name="Ukuran"> <br> 
+                <option value="0"> Pilih Ukuran</option>
+                <option value="1"> S </option>
+                <option value="2"> M </option>
+                <option value="3"> L </option>
+                <option value="4"> XL </option>
+                <option value="5"> XXL </option>
+            </select>
+        </div>
+        <br>
+        <div class="Add">
+            <label><p>Gender</p></label>
+            <select name="Gender"> <br> 
+                <option value="0"> Pilih Gender</option>
+                <option value="1"> Pria </option>
+                <option value="2"> Wanita </option>
+            </select>
+        </div>
+        <br>
+        <div class="Add">
+            <label><p>Warna</p></label>
+            <input type="color" name="Warna" id="Warna" required>
+        </div>
+        <div class="sub">
+            <input type="submit" value="Submit" onclick="validate();">
+        </div>
+    
+    </form>
+    <script type="text/javascript">
+        function validate(){
+            if (document.getElementById("Product").value == "") {
+                alert("Nama Produk Harus Di Isi");
+                document.getElementById("Product");
+                return false;
+            }
+            if (document.getElementById("Harga").value == "") {
+                alert("Harga Harus Di Isi");
+                document.getElementById("Harga");
+                return false;
+            }
+            if (document.getElementById("Deskripsi").value == "") {
+                alert("Deskripsi Product Harus Di Isi");
+                document.getElementById("Deskripsi");
+                return false;
+            }
+            if (document.getElementById("Stock").value == "") {
+                alert("Jumlah Stock Harus Di Isi");
+                document.getElementById("Stock");
+                return false;
+            }
+            if (document.forms["Addpro"]["Ukuran"].selectedIndex < 1) {
+                alert("Anda belum memilih ukuran.");
+                document.forms["Addpro"]["Ukuran"].focus();
+                return false;
+            }
+            if (document.forms["Addpro"]["Gender"].selectedIndex < 1) {
+                alert("Anda belum memilih gender.");
+                document.forms["Addpro"]["Gender"].focus();
+                return false;
+            }
+
+        }
+    </script>
+     <br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br>
+     <footer>
+         <div class="footer-content">
+              <p>Sebagai Pusat Cloth terbesar di Indonesia
+                 Tersedia Baju, Dress, Celana, dan masih banyak lagi
+              </p>
+         </div>
+         <div class="footer_b">
+              <p>Copyright &copy; Cloth.ID designed by <span>Nissa</span></p>
+          </div>
+ 
+      </footer>
+
+</body>
+</html> 
